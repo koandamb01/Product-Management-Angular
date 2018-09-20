@@ -1,0 +1,14 @@
+<main role="main">
+  <section class="jumbotron text-center" style="background-color: #dff9fb;">
+    <div class="container">
+      <h1 class="jumbotron-heading">All Products</h1>
+      <p class="lead text-muted">we can manage a set of products. You are able to create products,
+        remove old products, and edit old products</p>
+      <p class="btn-header">
+        <a class="btn btn-primary my-2 text-white" [routerLink]="['new']">Create new product</a>
+        <a class="btn btn-secondary my-2 text-white" [routerLink]="['/']">Return home</a>
+      </p>
+    </div>
+  </section>
+  <router-outlet></router-outlet>
+</main>

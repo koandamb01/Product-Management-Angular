@@ -1,0 +1,39 @@
+<main role="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form (submit)="createProduct()">
+          <p>Add new product</p>
+          <span class="text-success" *ngIf="messages.success">{{ messages.success }}</span>
+          <div class="form-group">
+            <span class="text-danger" *ngIf="messages.title">{{ messages.title }}</span>
+            <input type="text" class="form-control" name="title" [(ngModel)]="newProduct.title" placeholder="Product Name">
+          </div>
+          <div class="form-group">
+            <span class="text-danger" *ngIf="messages.price">{{ messages.price }}</span>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">$</div>
+              </div>
+              <input type="text" class="form-control" name="price" [(ngModel)]="newProduct.price" placeholder="Product Price">
+            </div>
+          </div>
+          <div class="form-group">
+            <span class="text-danger" *ngIf="messages.imageUrl">{{ messages.imageUrl }}</span>
+            <input type="text" class="form-control" name="imageUrl" [(ngModel)]="newProduct.imageUrl" placeholder="image Url">
+          </div>
+          <br>
+          <a class="btn btn-danger btn-sm" [routerLink]="['/products']">Cancel</a>
+          <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <div class="img-box">
+          <img src="http://media.idownloadblog.com/wp-content/uploads/2018/09/iPhone-XR-XS-wallpaper-mockup.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
